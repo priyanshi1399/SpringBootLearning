@@ -1,5 +1,6 @@
 package com.priyanshi.LearningSpringBoot.Controller;
 
+import com.priyanshi.LearningSpringBoot.Entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.DataBinder;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,11 @@ public class SampleController {
     public String getDetails(@PathVariable (value="firstName") String firstName){
         return "fetching and returning user details based on the firstName =" +firstName;
     }
+
+    @PostMapping(path="/saveUser")
+    public String getUserDetails(@RequestBody User user){
+        return "User Created "
+ +user.username + ":" +user.email;     }
 
 }
 
