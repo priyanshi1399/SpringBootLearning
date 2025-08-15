@@ -1,13 +1,21 @@
 package com.priyanshi.LearningSpringBoot;
 
+import com.priyanshi.LearningSpringBoot.Entity.UserExFieldInjection;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class LearningSpringBootApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LearningSpringBootApplication.class, args);
+
+
+		ConfigurableApplicationContext context=SpringApplication.run(LearningSpringBootApplication.class, args);
+		context.close();
+
+		UserExFieldInjection user=new UserExFieldInjection();
+		user.process();
 	}
 
 }

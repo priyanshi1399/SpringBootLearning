@@ -4,12 +4,12 @@ import jakarta.servlet.ServletOutputStream;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+
 @SpringBootTest
-class LearningSpringBootApplicationTests {
+class LearningSpringBootTest{
 
 	@Test
-	void contextLoads() {
-		System.out.println("Helloe this is priyanshi");
+	public  void contest(){
+		System.out.println("Hello from Priyanshi");
 	}
-
 }
